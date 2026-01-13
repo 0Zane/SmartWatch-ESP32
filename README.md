@@ -13,8 +13,8 @@ Build a custom wearable smart watch from scratch to explore embedded systems, fi
 ### Sensors
 * **Timekeeping:** Still looking for a compact RTC module
 * **ToF Ranging:** VL53L0X (I2C) for distance measurement up to 2m via infrared pulses.
-* **Biometrics:** MAX30102 for Heart Rate/SpO2 (requires tight skin contact).
-* **Motion:** LIS3DH or MPU6050. Used for "Raise-to-Wake" functionality and step counting.
+* **Biometrics:** MAX30102 for Heart Rate (requires tight skin contact).
+* **Motion:** Still looking for gyroscope / accelerometer if required for the project.
 * **Utility:** Integrated 5mW Laser Diode controlled via a simple MOSFET switch.
 
 ### Power Management
@@ -22,8 +22,8 @@ Build a custom wearable smart watch from scratch to explore embedded systems, fi
 * **Charging:** TP4056 charging IC via USB-C.
 
 ## Software Features
-* **Firmware:** Written in C++ vie PlatformIO.
-* **Power Management:** Deep Sleep implementation with external wake-up interrupts.
+* **Firmware:** Written in C++ via PlatformIO.
+* **Power Management:** Sleep mode implementation with external wake-up interrupts.
 * **Connectivity:**
     * Wi-Fi/BLE scanning tools.
     * ESP-NOW for ultra-fast communication with other ESP devices.
@@ -32,4 +32,4 @@ Build a custom wearable smart watch from scratch to explore embedded systems, fi
 1. **Prototyping:** Wiring all modules on breadboard with an ESP32 DevKit.
 2. **Schematic & PCB :** I will use KiCAD to design PCB and schematics
 4. **Assembly:** Probably hand soldering.
-5. **Case creation  : ** I will learn to use 3d modeling CAD like Fusion360 to create a case for the project.
+5. **Case creation  :** I will learn to use 3d modeling CAD like Fusion360 to create a case for the project.
