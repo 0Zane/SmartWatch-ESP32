@@ -3,7 +3,7 @@
 ## Project Goals
 Build a custom wearable smart watch from scratch to explore embedded systems, firmware developpement, and PCB integration. 
 
-##Hardware Architecture
+## Hardware Architecture
 
 ### Processing & Display
 * **MCU:** ESP32-S3-WROOM-1 NR16R8 for Wi-Fi/BLE and dual-core processing.
