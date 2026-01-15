@@ -15,16 +15,13 @@ void setup() {
   tft.init();
   Serial.begin(256000);
   tft.setRotation(1);
-  tft.fillScreen(TFT_BLUE);
+  tft.fillScreen(TFT_BLACK);
   Serial.println("Setup done");
-
+  tft.setTextColor(TFT_BLUE);
+  tft.drawString("Smart Watch initializing...",0,0);
 }
 
 void loop() {
-  tft.fillScreen(TFT_RED);
-  delay(1000);
-  tft.fillScreen(TFT_BLUE);
-  delay(1000);
-  Serial.println("Loop running...");
+  
 
 }
