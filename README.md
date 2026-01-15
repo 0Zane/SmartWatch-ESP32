@@ -15,7 +15,7 @@ Build a custom wearable smart watch from scratch to explore embedded systems, fi
 * **ToF Ranging:** VL53L0X (I2C) for distance measurement up to 2m via infrared pulses.
 * **Biometrics:** MAX30102 for Heart Rate (requires tight skin contact).
 * **Motion:** Still looking for gyroscope / accelerometer if required for the project.
-* **Utility:** Integrated 5mW Laser Diode controlled via a simple MOSFET switch.
+* **Utility:** IR TX + IR RX
 
 ### Power Management
 * **Battery:** LiPo (minimum 300mAh).
