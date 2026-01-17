@@ -30,7 +30,15 @@ void setup() {
 
 void loop() {
 
+  Serial.println(page_number);
 
+  if (digitalRead(BPLUS)== 0){
+    ++page_number ;
+  }
+  if (digitalRead(BMINUS)== 0){
+    page_number =page_number - 1;
+  }
+  
   
   if (page_number == 0){
     tft.fillScreen(TFT_WHITE);
