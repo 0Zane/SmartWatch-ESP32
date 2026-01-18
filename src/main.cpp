@@ -15,6 +15,9 @@ const int BMINUS = 27;
 // TFT_RST   4 
 
 
+
+
+
 void setup() {
   pinMode(BPLUS, INPUT_PULLDOWN);
   pinMode(BMINUS, INPUT_PULLDOWN);
@@ -32,13 +35,23 @@ void loop() {
 
   Serial.println(page_number);
 
-  if (digitalRead(BPLUS)== 0){
-    ++page_number ;
+
+if (digitalRead(BPLUS) == HIGH) {
+  ++ page_number; 
+
+  while (digitalRead(BPLUS) == HIGH){
+    delay(10);
   }
-  if (digitalRead(BMINUS)== 0){
-    page_number =page_number - 1;
+}
+
+
+  if (digitalRead(BMINUS) == HIGH) {
+  page_number--; 
+
+  while (digitalRead(BMINUS) == HIGH){
+    delay(10);
   }
-  
+}
   
   if (page_number == 0){
     tft.fillScreen(TFT_WHITE);
@@ -76,7 +89,5 @@ void loop() {
     tft.drawString("Welcome to page 5", 20 , 64);
 
   }
-
-
 
 }
