@@ -6,14 +6,13 @@ int page_number = 0;
 String serial_input = "0";
 const int BPLUS = 26;
 const int BMINUS = 27;
-
+int number_of_pages =  5;
 // TFT_MISO 19
 // TFT_MOSI (SDA) 23
 // TFT_SCLK 18
 // TFT_CS   15  
 // TFT_DC    2  
 // TFT_RST   4 
-
 
 
 
@@ -37,57 +36,37 @@ void loop() {
 
 
 if (digitalRead(BPLUS) == HIGH) {
+  if (page_number<=number_of_pages){
   ++ page_number; 
 
-  while (digitalRead(BPLUS) == HIGH){
-    delay(10);
+    while (digitalRead(BPLUS) == HIGH){
+      delay(10);
+    }
+
+  }else { }
+
   }
-}
 
 
-  if (digitalRead(BMINUS) == HIGH) {
-  page_number--; 
+
+if (digitalRead(BMINUS) == HIGH) {
+  if (0<page_number){
+  -- page_number; 
 
   while (digitalRead(BMINUS) == HIGH){
     delay(10);
-  }
+   }
+
+  }else { }
+
 }
   
-  if (page_number == 0){
-    tft.fillScreen(TFT_WHITE);
-    tft.setTextColor(TFT_BLACK);
-    tft.drawString("Welcome to page 0", 20 , 64);
 
-  }
-  if (page_number == 1){
-    tft.fillScreen(TFT_BLUE);
-    tft.setTextColor(TFT_BLACK);
-    tft.drawString("Welcome to page 1", 20 , 64);
+    tft.fillScreen(TFT_BLACK);
+    tft.setTextColor(TFT_WHITE);
+    tft.drawString("Welcome to page ", 20 , 64);
+    tft.drawString(String(page_number), 20 , 74);
 
-  }
-  if (page_number == 2){
-    tft.fillScreen(TFT_RED);
-    tft.setTextColor(TFT_BLACK);
-    tft.drawString("Welcome to page 2", 20 , 64);
 
-  }
-  if (page_number == 3){
-    tft.fillScreen(TFT_YELLOW);
-    tft.setTextColor(TFT_BLACK);
-    tft.drawString("Welcome to page 3", 20 , 64);
-
-  }
-  if (page_number == 4){
-    tft.fillScreen(TFT_YELLOW);
-    tft.setTextColor(TFT_BLACK);
-    tft.drawString("Welcome to page 4", 20 , 64);
-
-  }
-  if (page_number == 5){
-    tft.fillScreen(TFT_YELLOW);
-    tft.setTextColor(TFT_BLACK);
-    tft.drawString("Welcome to page 5", 20 , 64);
-
-  }
 
 }
