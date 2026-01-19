@@ -38,10 +38,7 @@ void loop() {
 if (digitalRead(BPLUS) == HIGH) {
   if (page_number<=number_of_pages){
   ++ page_number; 
-
-    while (digitalRead(BPLUS) == HIGH){
-      delay(10);
-    }
+  delay(300);
 
   }else { }
 
@@ -53,9 +50,9 @@ if (digitalRead(BMINUS) == HIGH) {
   if (0<page_number){
   -- page_number; 
 
-  while (digitalRead(BMINUS) == HIGH){
-    delay(10);
-   }
+
+    delay(300);
+   
 
   }else { }
 
