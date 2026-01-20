@@ -6,7 +6,12 @@ int page_number = 0;
 String serial_input = "0";
 const int BPLUS = 26;
 const int BMINUS = 27;
+const int BSELECT = 25;
 int number_of_pages =  5;
+
+//PROTOTYPING PINOUT
+
+//SCREEN
 // TFT_MISO 19
 // TFT_MOSI (SDA) 23
 // TFT_SCLK 18
@@ -14,6 +19,10 @@ int number_of_pages =  5;
 // TFT_DC    2  
 // TFT_RST   4 
 
+//BUTTONS
+//BPLUS 26
+//BSELECT 25
+//BMINUS 27
 
 
 
