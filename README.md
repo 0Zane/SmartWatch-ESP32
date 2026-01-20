@@ -6,7 +6,7 @@ Build a custom wearable smart watch from scratch to explore embedded systems, fi
 ## Ideas for Hardware Architecture
 
 ### Processing & Display
-* **MCU:** ESP32-S3-WROOM-1 NR16R8 for Wi-Fi/BLE and dual-core processing.
+* **MCU:** ESP32-S3-WROOM-1 for Wi-Fi/BLE and dual-core processing.
 * **Display:** 1.28" TFT LCD via SPI.
 * **Input:** 3x Physical buttons .
 
@@ -18,14 +18,14 @@ Build a custom wearable smart watch from scratch to explore embedded systems, fi
 * **Utility:** IR TX + IR RX
 
 ### Power Management
-* **Battery:** LiPo (minimum 300mAh).
-* **Charging:** TP4056 charging IC via USB-C.
+* **Battery:** LiPo (around 500mAh.
+* **Charging:** Still looking for power management module.
 
 ## Software Features
 * **Firmware:** Written in C++ via PlatformIO.
 * **Power Management:** Sleep mode implementation with external wake-up interrupts.
 * **Connectivity:**
-    * Wi-Fi/BLE scanning tools.
+    * Wi-Fi/BLE scanning ans testing tools.
     * ESP-NOW for ultra-fast communication with other ESP devices.
 
 ## Development Stages
