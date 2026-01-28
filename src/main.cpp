@@ -24,7 +24,12 @@ int number_of_pages =  5;
 //BSELECT 25
 //BMINUS 27
 
-
+void updatescreen(int page_number){
+    tft.fillScreen(TFT_BLACK);
+    tft.setTextColor(TFT_WHITE);
+    tft.drawString("Welcome to page ", 20 , 64);
+    tft.drawString(String(page_number), 20 , 74);
+}
 
 void setup() {
   pinMode(BPLUS, INPUT_PULLDOWN);
@@ -47,6 +52,7 @@ void loop() {
 if (digitalRead(BPLUS) == HIGH) {
   if (page_number<=number_of_pages){
   ++ page_number; 
+  updatescreen(page_number);
   delay(300);
 
   }else { }
@@ -58,7 +64,7 @@ if (digitalRead(BPLUS) == HIGH) {
 if (digitalRead(BMINUS) == HIGH) {
   if (0<page_number){
   -- page_number; 
-
+    updatescreen(page_number);
 
     delay(300);
    
@@ -68,10 +74,6 @@ if (digitalRead(BMINUS) == HIGH) {
 }
   
 
-    tft.fillScreen(TFT_BLACK);
-    tft.setTextColor(TFT_WHITE);
-    tft.drawString("Welcome to page ", 20 , 64);
-    tft.drawString(String(page_number), 20 , 74);
 
 
 
