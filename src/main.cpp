@@ -24,6 +24,15 @@ int number_of_pages =  5;
 //BSELECT 25
 //BMINUS 27
 
+
+
+
+// STEPS THAT MAIN.CPP WILL FOLLOW
+
+// BEGIN TFT
+// BOOT SCREEN
+//GET TIME FFROM RTC MODULE
+
 void updatescreen(int page_number){
     tft.fillScreen(TFT_BLACK);
     tft.setTextColor(TFT_WHITE);
