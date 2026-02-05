@@ -41,15 +41,15 @@ void updatescreen(int page_number){
 }
 
 void setup() {
-  pinMode(BPLUS, INPUT_PULLDOWN);
+  pinMode(BPLUS, INPUT_PULLUP);
   pinMode(BMINUS, INPUT_PULLDOWN);
   tft.init();
   Serial.begin(115200);
   tft.setRotation(1);
   tft.fillScreen(TFT_BLACK);
   Serial.println("Setup done");
-  tft.setTextColor(TFT_BLUE);
-  tft.drawString("Smart Watch initializing...",0,0);
+  tft.setTextColor(TFT_WHITE);
+  tft.drawString("OMNIHILUM",42,TFT_WIDTH/2);
   delay(2000);
 }
 
