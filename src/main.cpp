@@ -33,6 +33,18 @@ int number_of_pages =  5;
 // BOOT SCREEN
 //GET TIME FFROM RTC MODULE
 
+void boot_screen(){
+  tft.init();
+  Serial.begin(115200);
+  tft.setRotation(1);
+  tft.fillScreen(TFT_BLACK);
+  Serial.println("Setup done");
+  tft.setTextColor(TFT_WHITE);
+  tft.drawString("OMNIHILUM",40,TFT_WIDTH/2,2);
+  delay(2000);
+
+}
+
 void updatescreen(int page_number){
     tft.fillScreen(TFT_BLACK);
     tft.setTextColor(TFT_WHITE);
@@ -41,16 +53,10 @@ void updatescreen(int page_number){
 }
 
 void setup() {
+  boot_screen();
   pinMode(BPLUS, INPUT_PULLUP);
   pinMode(BMINUS, INPUT_PULLDOWN);
-  tft.init();
-  Serial.begin(115200);
-  tft.setRotation(1);
-  tft.fillScreen(TFT_BLACK);
-  Serial.println("Setup done");
-  tft.setTextColor(TFT_WHITE);
-  tft.drawString("OMNIHILUM",42,TFT_WIDTH/2);
-  delay(2000);
+
 }
 
 void loop() {
