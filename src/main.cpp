@@ -44,6 +44,14 @@ void boot_screen(){
   delay(2000);
 
 }
+void main_page(){
+  tft.fillScreen(TFT_BLACK);
+  tft.drawString("00:67",0,0,7);
+  
+}
+
+
+
 
 void updatescreen(int page_number){
     tft.fillScreen(TFT_BLACK);
@@ -55,7 +63,7 @@ void updatescreen(int page_number){
 void setup() {
   boot_screen();
   pinMode(BPLUS, INPUT_PULLUP);
-  pinMode(BMINUS, INPUT_PULLDOWN);
+  pinMode(BMINUS, INPUT_PULLUP);
 
 }
 
@@ -64,7 +72,7 @@ void loop() {
   Serial.println(page_number);
 
 
-if (digitalRead(BPLUS) == HIGH) {
+if (digitalRead(BPLUS) == LOW) {
   if (page_number<=number_of_pages){
   ++ page_number; 
   updatescreen(page_number);
@@ -76,8 +84,8 @@ if (digitalRead(BPLUS) == HIGH) {
 
 
 
-if (digitalRead(BMINUS) == HIGH) {
-  if (0<page_number){
+if (digitalRead(BMINUS) == LOW) {
+  if (1<page_number){
   -- page_number; 
     updatescreen(page_number);
 
@@ -86,6 +94,10 @@ if (digitalRead(BMINUS) == HIGH) {
 
   }else { }
 
+}
+
+if(page_number == 1){
+  main_page();
 }
   
 
