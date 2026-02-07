@@ -41,7 +41,10 @@ void boot_screen(){
   Serial.println("Setup done");
   tft.setTextColor(TFT_WHITE);
   tft.drawString("OMNIHILUM",40,TFT_WIDTH/2,2);
+  tft.drawRect(10,10,TFT_HEIGHT-20,TFT_WIDTH-20,TFT_WHITE);
   delay(2000);
+  Serial.println(TFT_HEIGHT);
+  Serial.println(TFT_WIDTH);
 
 }
 void main_page(){
@@ -69,7 +72,6 @@ void setup() {
 
 void loop() {
 
-  Serial.println(page_number);
 
 
 if (digitalRead(BPLUS) == LOW) {
