@@ -76,7 +76,7 @@ if (digitalRead(BPLUS) == LOW) {
   if (page_number<=number_of_pages){
   ++ page_number; 
   updatescreen(page_number);
-  delay(300);
+  delay(250);
 
   }else { }
 
@@ -85,11 +85,11 @@ if (digitalRead(BPLUS) == LOW) {
 
 
 if (digitalRead(BMINUS) == LOW) {
-  if (1<page_number){
+  if (0<page_number){
   -- page_number; 
     updatescreen(page_number);
 
-    delay(300);
+    delay(250);
    
 
   }else { }
@@ -98,6 +98,7 @@ if (digitalRead(BMINUS) == LOW) {
 
 if(page_number == 1){
   main_page();
+  delay(500);
 }
   
 
