@@ -43,8 +43,7 @@ void boot_screen(){
   tft.drawString("OMNIHILUM",45,TFT_WIDTH/2,2);
   tft.drawRect(10,10,TFT_HEIGHT-20,TFT_WIDTH-20,TFT_WHITE);
   delay(2000);
-  Serial.println(TFT_HEIGHT);
-  Serial.println(TFT_WIDTH);
+
 
 }
 void main_page(){
@@ -61,6 +60,7 @@ void updatescreen(int page_number){
     tft.setTextColor(TFT_WHITE);
     tft.drawString("Welcome to page ", 20 , 64);
     tft.drawString(String(page_number), 20 , 74);
+    delay(250);
 }
 
 void setup() {
@@ -78,7 +78,7 @@ if (digitalRead(BPLUS) == LOW) {
   if (page_number<=number_of_pages){
   ++ page_number; 
   updatescreen(page_number);
-  delay(250);
+  
 
   }else { }
 
