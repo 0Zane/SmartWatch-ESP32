@@ -4,5 +4,5 @@
 .vscode/launch.json
 .vscode/ipch
 pcb/watch-backups
-pcb/~watch.kicad_sch.lck
+pcb/~watch.*.lck
 pcb\watch.kicad_prl
